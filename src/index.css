@@ -1,0 +1,121 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-rule: rgba(22, 22, 22, 0.14);
+    --color-cream: #F4F2EB;
+    --color-ink: #161616;
+    --color-primary: #DE3B27;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: 'Archivo', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Typography & Utility Classes mirroring ainanai.vercel.app */
+.d-hero {
+  font-family: 'Anton', Impact, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-size: clamp(3rem, 10.5vw, 7.5rem);
+  font-weight: 400;
+  line-height: 0.88;
+}
+
+.d-1 {
+  font-family: 'Anton', Impact, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.018em;
+  font-size: clamp(2.2rem, 7vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.92;
+}
+
+.d-2 {
+  font-family: 'Anton', Impact, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 400;
+  line-height: 0.94;
+}
+
+.d-3 {
+  font-family: 'Anton', Impact, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.012em;
+  font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.rule-b {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.rule-t {
+  border-top: 1px solid var(--color-rule);
+}
+
+.rule-dark-t {
+  border-top: 1px solid rgba(244, 242, 235, 0.16);
+}
+
+.rule-dark-b {
+  border-bottom: 1px solid rgba(244, 242, 235, 0.16);
+}
+
+.link-wipe {
+  display: inline-block;
+  position: relative;
+}
+
+.link-wipe:after {
+  content: "";
+  background: #DE3B27;
+  transform-origin: 0;
+  width: 100%;
+  height: 2px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+}
+
+.link-wipe:hover:after,
+.link-wipe:focus-visible:after,
+.link-wipe.active:after {
+  transform: scaleX(1);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F2EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #DE3B27;
+}
