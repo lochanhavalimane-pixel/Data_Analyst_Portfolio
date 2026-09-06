@@ -1,6 +1,6 @@
 ﻿# Lochan Havalimane — Data Analyst Portfolio
 
-A high-performance editorial portfolio website tailored for **Lochan Havalimane**, designed in the brutalist editorial visual theme inspired by [ainanai.vercel.app](https://ainanai.vercel.app).
+A high-performance editorial portfolio website tailored for **Lochan Havalimane**, designed in the brutalist editorial visual theme 
 
 ## 🚀 Key Features
 
