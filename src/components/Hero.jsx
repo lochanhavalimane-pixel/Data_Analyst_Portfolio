@@ -1,7 +1,7 @@
 ﻿import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import { profileData } from "../data/profileData";
-import heroImage from "../assets/hero.PNG";
+import heroImage from "../assets/hero.png";
 
 export default function Hero({ onOpenResume }) {
 
