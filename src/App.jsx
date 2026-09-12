@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
-import InteractiveDemo from "./components/InteractiveDemo";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 import Process from "./components/Process";
@@ -25,7 +24,6 @@ export default function App() {
         <Hero onOpenResume={() => setIsResumeOpen(true)} />
         <About />
         <Experience />
-        <InteractiveDemo />
         <Projects />
         <TechStack />
         <Process />

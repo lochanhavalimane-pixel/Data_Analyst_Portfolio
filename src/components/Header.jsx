@@ -1,5 +1,5 @@
 ﻿import React, { useState, useEffect } from "react";
-import { FileText, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Header({ onOpenResume }) {
   const [scrolled, setScrolled] = useState(false);
@@ -18,7 +18,6 @@ export default function Header({ onOpenResume }) {
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
     { name: "Work", href: "#work" },
-    { name: "Live Data", href: "#livedata" },
     { name: "Stack", href: "#stack" },
     { name: "Education", href: "#education" },
     { name: "Contact", href: "#contact" },
@@ -61,24 +60,10 @@ export default function Header({ onOpenResume }) {
             ))}
           </nav>
 
-          <button
-            onClick={onOpenResume}
-            className="group flex items-center gap-2 border border-ink/20 px-3.5 py-1.5 eyebrow text-xs font-semibold text-ink transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white"
-          >
-            <FileText className="w-3.5 h-3.5 text-primary group-hover:text-white transition-colors" />
-            <span>Resume</span>
-          </button>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="flex items-center gap-3 lg:hidden">
-          <button
-            onClick={onOpenResume}
-            className="flex items-center gap-1.5 border border-ink/20 px-2.5 py-1 text-[0.7rem] eyebrow font-semibold text-ink hover:border-primary hover:text-primary"
-          >
-            <FileText className="w-3 h-3" />
-            <span>CV</span>
-          </button>
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

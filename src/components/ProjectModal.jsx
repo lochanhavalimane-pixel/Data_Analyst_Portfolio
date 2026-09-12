@@ -1,10 +1,9 @@
-﻿import React, { useEffect, useState } from "react";
-import { X, ExternalLink, Database, CheckCircle2, Copy, Check, BarChart2 } from "lucide-react";
+﻿import React, { useEffect } from "react";
+import { X, ExternalLink, CheckCircle2, BarChart2 } from "lucide-react";
 import { GithubIcon } from "./Icons";
+import InteractiveDemo from "./InteractiveDemo";
 
 export default function ProjectModal({ project, onClose }) {
-  const [copied, setCopied] = useState(false);
-
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") onClose();
@@ -18,14 +17,6 @@ export default function ProjectModal({ project, onClose }) {
   }, [onClose]);
 
   if (!project) return null;
-
-  const copySql = () => {
-    if (project.sqlSnippet) {
-      navigator.clipboard.writeText(project.sqlSnippet);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
-  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/80 backdrop-blur-sm p-4 sm:p-6 overflow-y-auto">
@@ -115,25 +106,9 @@ export default function ProjectModal({ project, onClose }) {
           </ul>
         </div>
 
-        {/* SQL Queries */}
-        {project.sqlSnippet && (
+        {project.id === "customer-shopping-behaviour" && (
           <div className="mt-8 border-t border-rule pt-6">
-            <div className="flex items-center justify-between mb-3">
-              <h3 className="eyebrow text-xs font-bold text-ink flex items-center gap-2">
-                <Database className="w-3.5 h-3.5 text-primary" />
-                <span>Analytical SQL Implementation</span>
-              </h3>
-              <button
-                onClick={copySql}
-                className="flex items-center gap-1 text-xs font-mono text-primary hover:underline"
-              >
-                {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                <span>{copied ? "Copied" : "Copy SQL"}</span>
-              </button>
-            </div>
-            <pre className="bg-ink text-cream p-4 font-mono text-xs sm:text-sm overflow-x-auto border border-rule leading-relaxed">
-              <code>{project.sqlSnippet}</code>
-            </pre>
+            <InteractiveDemo embedded />
           </div>
         )}
 

@@ -1,9 +1,9 @@
-﻿import React, { useState } from "react";
-import { ArrowUpRight, TrendingUp, BarChart3, Database, FileSpreadsheet, CheckCircle2 } from "lucide-react";
+﻿import React from "react";
+import { ArrowUpRight } from "lucide-react";
 import { profileData } from "../data/profileData";
+import heroImage from "../assets/hero.PNG";
 
 export default function Hero({ onOpenResume }) {
-  const [activeMetricTab, setActiveMetricTab] = useState("revenue");
 
   return (
     <section id="top" class="rule-b pt-20 sm:pt-24 lg:pt-28">
@@ -42,6 +42,7 @@ export default function Hero({ onOpenResume }) {
 
           <div className="mt-8 max-w-2xl border-l-2 border-primary pl-5 sm:mt-9 sm:pl-6">
             <p className="text-base sm:text-[1.0625rem] leading-relaxed text-ink/85 font-normal">
+              <span className="mb-2 block font-semibold text-ink">I'm Lochan Havalimane.</span>
               {profileData.leadStory}
             </p>
           </div>
@@ -56,142 +57,22 @@ export default function Hero({ onOpenResume }) {
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
 
-            <a
-              href="#livedata"
-              className="group inline-flex items-center gap-2 border border-ink/20 px-6 py-4 eyebrow text-xs text-ink transition-all duration-300 hover:border-ink hover:bg-ink/5"
-            >
-              <BarChart3 className="w-4 h-4 text-primary" />
-              <span>Live Analytics Demo</span>
-            </a>
-
             <button
               onClick={onOpenResume}
-              className="link-wipe eyebrow text-xs font-bold text-primary py-2 px-1"
+              className="eyebrow text-xs font-bold bg-primary text-cream px-4 py-3 transition-colors duration-300 hover:bg-ink hover:text-white"
             >
               Read Full CV →
             </button>
           </div>
         </div>
 
-        {/* Right High-Impact Analytical Showcase Card */}
-        <div className="order-2 lg:order-2 lg:border-l lg:border-rule bg-cream-card p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
-          <div>
-            <div className="flex items-center justify-between border-b border-rule pb-4">
-              <div className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 bg-primary"></span>
-                <span className="eyebrow text-xs text-ink font-bold tracking-eyebrow">
-                  Featured Case Study Metric
-                </span>
-              </div>
-              <span className="eyebrow text-[0.65rem] text-primary font-mono bg-primary/10 px-2 py-0.5">
-                3,900 ROWS
-              </span>
-            </div>
-
-            <div className="mt-6">
-              <h2 className="d-3 text-ink">
-                Customer Shopping Behavior
-              </h2>
-              <p className="mt-2 text-xs font-mono text-muted uppercase tracking-wider">
-                Python (Pandas) • MySQL • Power BI
-              </p>
-            </div>
-
-            {/* Interactive Tab Toggle */}
-            <div className="mt-6 grid grid-cols-2 gap-2 border border-rule p-1 bg-cream/60">
-              <button
-                onClick={() => setActiveMetricTab("revenue")}
-                className={`py-2 px-3 text-xs eyebrow tracking-wider font-semibold transition-all ${
-                  activeMetricTab === "revenue"
-                    ? "bg-ink text-cream shadow-sm"
-                    : "text-ink/70 hover:text-ink"
-                }`}
-              >
-                Gender Revenue Split
-              </button>
-              <button
-                onClick={() => setActiveMetricTab("loyalty")}
-                className={`py-2 px-3 text-xs eyebrow tracking-wider font-semibold transition-all ${
-                  activeMetricTab === "loyalty"
-                    ? "bg-ink text-cream shadow-sm"
-                    : "text-ink/70 hover:text-ink"
-                }`}
-              >
-                Repeat Buyer Lift
-              </button>
-            </div>
-
-            {/* Dynamic Metric Display */}
-            {activeMetricTab === "revenue" ? (
-              <div className="mt-6 space-y-4">
-                <div className="border border-rule p-4 bg-white/70">
-                  <div className="flex justify-between items-baseline">
-                    <span className="text-xs font-mono text-muted">Male Customers</span>
-                    <span className="text-xl font-display text-primary">$157.9K (67.7%)</span>
-                  </div>
-                  <div className="mt-2 h-2.5 w-full bg-cream overflow-hidden">
-                    <div className="h-full bg-primary" style={{ width: "67.7%" }}></div>
-                  </div>
-                </div>
-
-                <div className="border border-rule p-4 bg-white/70">
-                  <div className="flex justify-between items-baseline">
-                    <span className="text-xs font-mono text-muted">Female Customers</span>
-                    <span className="text-xl font-display text-ink">$75.2K (32.3%)</span>
-                  </div>
-                  <div className="mt-2 h-2.5 w-full bg-cream overflow-hidden">
-                    <div className="h-full bg-ink" style={{ width: "32.3%" }}></div>
-                  </div>
-                </div>
-
-                <div className="p-3 bg-primary/5 border-l-2 border-primary text-xs text-ink/80 leading-relaxed">
-                  <strong className="text-primary font-semibold">SQL Discovery:</strong> Male buyers generated 2.1× higher gross merchandise volume, concentrated in outerwear and accessories.
-                </div>
-              </div>
-            ) : (
-              <div className="mt-6 space-y-4">
-                <div className="border border-rule p-4 bg-white/70">
-                  <div className="flex justify-between items-baseline">
-                    <span className="text-xs font-mono text-muted">Repeat Buyers (&gt;5 orders)</span>
-                    <span className="text-xl font-display text-primary">38.2% Subscribed</span>
-                  </div>
-                  <div className="mt-2 h-2.5 w-full bg-cream overflow-hidden">
-                    <div className="h-full bg-primary" style={{ width: "76%" }}></div>
-                  </div>
-                </div>
-
-                <div className="border border-rule p-4 bg-white/70">
-                  <div className="flex justify-between items-baseline">
-                    <span className="text-xs font-mono text-muted">First-Time Buyers (1 order)</span>
-                    <span className="text-xl font-display text-ink">13.0% Subscribed</span>
-                  </div>
-                  <div className="mt-2 h-2.5 w-full bg-cream overflow-hidden">
-                    <div className="h-full bg-ink" style={{ width: "26%" }}></div>
-                  </div>
-                </div>
-
-                <div className="p-3 bg-primary/5 border-l-2 border-primary text-xs text-ink/80 leading-relaxed">
-                  <strong className="text-primary font-semibold">Strategic Impact:</strong> Customers who made &gt;5 purchases were 2.94× more likely to subscribe, prompting targeted post-order loyalty automations.
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Card Footer */}
-          <div className="mt-8 pt-6 border-t border-rule flex items-center justify-between">
-            <div className="flex items-center gap-3 text-xs font-mono text-muted">
-              <Database className="w-4 h-4 text-primary" />
-              <span>Cleaned in Python • Queried in MySQL</span>
-            </div>
-            <a
-              href="https://github.com/lochanhavalimane-pixel/Customer-Shopping-Behaviour-Analysis"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs eyebrow text-primary hover:underline flex items-center gap-1 font-semibold"
-            >
-              <span>GitHub Repo</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
+        <div className="order-2 lg:order-2 flex items-center justify-center border-t border-rule bg-cream-card px-5 pb-10 pt-6 sm:px-8 sm:pb-12 lg:border-l lg:border-t-0 lg:p-6">
+          <div className="w-full max-w-[34rem] overflow-hidden rounded-[1.75rem] border border-rule bg-white shadow-[0_24px_60px_rgba(13,18,26,0.12)]">
+            <img
+              src={heroImage}
+              alt={profileData.name}
+              className="h-[420px] w-full object-cover object-center sm:h-[500px] lg:h-[clamp(500px,42vw,680px)]"
+            />
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ export default function ResumeModal({ isOpen, onClose }) {
         {/* Controls Bar */}
         <div className="flex items-center justify-between border-b border-rule pb-4 mb-8 print:hidden">
           <span className="eyebrow text-xs text-primary font-bold">
-            Curriculum Vitae • Data Analyst
+            • Data Analyst
           </span>
           <div className="flex items-center gap-3">
             <button
@@ -159,7 +159,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <li>Identified that repeat buyers (&gt;5 purchases) were nearly <strong>3× more likely to subscribe</strong>, informing loyalty program recommendations.</li>
                 <li>Built an interactive Power BI dashboard with dynamic filters to visualize revenue and sales trends across categories and age groups.</li>
                 <li className="list-none -ml-4 font-mono text-primary text-[0.75rem]">
-                  Repository: github.com/lochanhavalimane-pixel/Customer-Shopping-Behaviour-Analysis
+                  Repository: github.com/lochanhavalimane-pixel/Customer_Shopping_Behaviour_Analysis
                 </li>
               </ul>
             </div>

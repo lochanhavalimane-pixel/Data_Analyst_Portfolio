@@ -7,7 +7,7 @@
   email: "lochanhavalimane@gmail.com",
   phone: "+91-9019462077",
   github: "https://github.com/lochanhavalimane-pixel",
-  linkedin: "https://linkedin.com/in/lochanhavalimane",
+  linkedin: "https://www.linkedin.com/in/lochan-havalimane-678031294/",
   summary: `Results-oriented Data Analyst with a strong foundation in data analysis, data cleaning, statistical analysis, and data visualization. Proficient in Excel, SQL, Python, and Power BI, with the ability to transform raw data into meaningful insights and actionable business recommendations. Skilled in developing dashboards, reports, KPIs, and data-driven solutions to support business decision-making. Strong analytical, problem-solving, and communication skills with a keen ability to identify trends, patterns, and opportunities for process improvement.`,
   leadStory: `I transform messy datasets into clear, actionable business strategies. From designing SQL pipelines and automated Python analysis to executive Power BI dashboards and predictive customer behavior models, I enjoy answering the hard questions with data. The best part isn't generating the chart — it's watching business leaders make multi-thousand dollar decisions with total confidence because the numbers speak clearly.`,
   stats: [
