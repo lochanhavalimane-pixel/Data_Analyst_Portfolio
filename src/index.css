@@ -4,10 +4,12 @@
 
 @layer base {
   :root {
-    --color-rule: rgba(22, 22, 22, 0.14);
-    --color-cream: #F4F2EB;
-    --color-ink: #161616;
-    --color-primary: #DE3B27;
+    --color-rule: rgba(27, 42, 74, 0.12); /* Subtle borders & grid lines */
+    --color-cream: #E5E1D8;              /* Warm stone / beige background */
+    --color-ink: #22252A;                /* Off-black body text */
+    --color-primary: #1E3A5F;            /* Deep slate blue (for big hero text & bold titles) */
+    --color-accent: #6C8DAE;             /* Soft steel blue (for progress bars & badges) */
+    --color-card-bg: #EAE6DD;            /* Slightly lighter container/card background */
   }
 
   html {
@@ -77,11 +79,11 @@
 }
 
 .rule-dark-t {
-  border-top: 1px solid rgba(244, 242, 235, 0.16);
+  border-top: 1px solid rgba(238, 244, 245, 0.16);
 }
 
 .rule-dark-b {
-  border-bottom: 1px solid rgba(244, 242, 235, 0.16);
+  border-bottom: 1px solid rgba(238, 244, 245, 0.16);
 }
 
 .link-wipe {
@@ -91,7 +93,7 @@
 
 .link-wipe:after {
   content: "";
-  background: #DE3B27;
+  background: var(--color-primary);
   transform-origin: 0;
   width: 100%;
   height: 2px;
@@ -114,8 +116,8 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F4F2EB;
+  background: var(--color-card-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #DE3B27;
+  background: var(--color-accent);
 }
