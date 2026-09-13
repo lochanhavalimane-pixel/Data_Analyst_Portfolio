@@ -36,6 +36,77 @@
   line-height: 0.88;
 }
 
+/* The clipped line masks create the same editorial text entrance as the reference site. */
+.hero-title-line {
+  overflow: hidden;
+}
+
+.hero-title-text {
+  display: block;
+  animation: hero-title-reveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-title-line:nth-child(1) .hero-title-text { animation-delay: 0.18s; }
+.hero-title-line:nth-child(2) .hero-title-text { animation-delay: 0.28s; }
+.hero-title-line:nth-child(3) .hero-title-text { animation-delay: 0.38s; }
+
+.hero-enter-item {
+  animation: hero-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-enter-item:nth-child(1) { animation-delay: 0.05s; }
+.hero-enter-item:nth-child(2) { animation-delay: 0.62s; }
+.hero-enter-item:nth-child(3) { animation-delay: 0.78s; }
+
+.hero-enter-image {
+  animation: hero-image-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.heading-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.page-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.heading-reveal.is-visible {
+  animation: hero-fade-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.page-reveal.is-visible {
+  animation: hero-fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes hero-title-reveal {
+  from { transform: translateY(105%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-image-in {
+  from { opacity: 0; transform: translateX(28px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title-text,
+  .hero-enter-item,
+  .hero-enter-image,
+  .heading-reveal,
+  .page-reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .d-1 {
   font-family: 'Anton', Impact, sans-serif;
   text-transform: uppercase;

@@ -25,7 +25,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-ink pb-10 text-cream border-t border-cream/15">
+    <footer className="page-reveal bg-ink pb-10 text-cream border-t border-cream/15">
       <div className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12 pt-8">
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 sm:flex sm:justify-between">
           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">

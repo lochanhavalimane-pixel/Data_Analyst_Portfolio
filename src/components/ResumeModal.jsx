@@ -58,7 +58,7 @@ export default function ResumeModal({ isOpen, onClose }) {
         <div className="resume-paper font-sans">
           {/* Header */}
           <div className="text-center border-b border-rule pb-6">
-            <h1 className="text-3xl sm:text-4xl font-display uppercase tracking-tight text-ink">
+            <h1 className="heading-reveal text-3xl sm:text-4xl font-display uppercase tracking-tight text-ink">
               {profileData.name}
             </h1>
             <p className="mt-1 text-sm text-muted font-medium">

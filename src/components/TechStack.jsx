@@ -15,14 +15,14 @@ export default function TechStack() {
   };
 
   return (
-    <section id="stack" className="rule-b py-12 sm:py-16 lg:py-20">
+    <section id="stack" className="page-reveal rule-b py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
         <div className="flex items-center gap-3">
           <span className="h-2 w-2 shrink-0 bg-primary" aria-hidden="true"></span>
           <span className="eyebrow text-ink/70 tracking-eyebrow text-xs">Technical Toolbelt</span>
         </div>
 
-        <h2 className="d-1 mt-4">
+        <h2 className="heading-reveal d-1 mt-4">
           <span className="block">
             <span className="block text-ink">THE TOOLS I</span>
             <span className="block text-primary">REACH FOR.</span>

@@ -4,7 +4,7 @@ import { Award, Briefcase, Calendar, CheckCircle2 } from "lucide-react";
 
 export default function Experience() {
   return (
-    <section id="experience" className="rule-b py-12 sm:py-16 lg:py-20">
+    <section id="experience" className="page-reveal rule-b py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
         <div className="grid gap-10 lg:grid-cols-[0.32fr_0.68fr] lg:gap-14">
           {/* Left Column: Sticky Title */}
@@ -13,7 +13,7 @@ export default function Experience() {
               <span className="h-2 w-2 shrink-0 bg-primary" aria-hidden="true"></span>
               <span className="eyebrow text-ink/70 tracking-eyebrow text-xs">Simulations & Track Record</span>
             </div>
-            <h2 className="d-1 mt-4">
+            <h2 className="heading-reveal d-1 mt-4">
               <span className="block">
                 <span className="block text-ink">WHERE I'VE</span>
                 <span className="block text-primary">TRAINED &amp; SHIPPED.</span>

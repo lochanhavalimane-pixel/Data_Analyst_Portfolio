@@ -61,7 +61,7 @@ export default function ProjectModal({ project, onClose }) {
 
         {/* Title & Subtitle */}
         <div className="mt-6">
-          <h2 className="d-2 text-ink">
+          <h2 className="heading-reveal d-2 text-ink">
             {project.title}
           </h2>
           <p className="mt-2 text-sm sm:text-base font-mono text-primary font-semibold">

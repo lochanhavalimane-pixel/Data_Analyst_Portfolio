@@ -19,12 +19,12 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-ink py-12 text-cream sm:py-16 lg:py-20">
+    <section id="contact" className="page-reveal bg-ink py-12 text-cream sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
           {/* Left Column */}
           <div>
-            <h2 className="d-1 text-cream">
+            <h2 className="heading-reveal d-1 text-cream">
               LET'S TALK<br />
               DATA &amp;<br />
               <span className="text-primary">GROWTH.</span>

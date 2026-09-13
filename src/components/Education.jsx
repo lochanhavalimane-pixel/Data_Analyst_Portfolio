@@ -4,7 +4,7 @@ import { GraduationCap, Award, Calendar } from "lucide-react";
 
 export default function Education() {
   return (
-    <section id="education" className="rule-b py-12 sm:py-16 lg:py-20">
+    <section id="education" className="page-reveal rule-b py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
         <div className="grid gap-10 lg:grid-cols-[0.32fr_0.68fr] lg:gap-14">
           {/* Left Column */}
@@ -13,7 +13,7 @@ export default function Education() {
               <span className="h-2 w-2 shrink-0 bg-primary" aria-hidden="true"></span>
               <span className="eyebrow text-ink/70 tracking-eyebrow text-xs">Academic Background</span>
             </div>
-            <h2 className="d-1 mt-4">
+            <h2 className="heading-reveal d-1 mt-4">
               <span className="block text-ink">EDUCATION &amp;</span>
               <span className="block text-primary">CREDENTIALS.</span>
             </h2>

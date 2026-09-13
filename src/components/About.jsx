@@ -4,7 +4,7 @@ import { GraduationCap, Award, Compass, CheckCircle } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="rule-b py-12 sm:py-16 lg:py-20">
+    <section id="about" className="page-reveal rule-b py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           {/* Left Column: Heading & Narrative */}
@@ -14,7 +14,7 @@ export default function About() {
               <span className="eyebrow text-ink/70 tracking-eyebrow text-xs">About Me</span>
             </div>
 
-            <h2 className="d-1 mt-4">
+            <h2 className="heading-reveal d-1 mt-4">
               <span className="block">
                 <span className="block text-ink">DATA ANALYST,</span>
                 <span className="block text-primary">PYTHON & SQL DEVELOPER</span>

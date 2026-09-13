@@ -1,15 +1,15 @@
 ﻿import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import { profileData } from "../data/profileData";
-import heroImage from "../assets/hero.png";
+import heroImage from "../assets/hero.PNG";
 
 export default function Hero({ onOpenResume }) {
 
   return (
-    <section id="top" class="rule-b pt-20 sm:pt-24 lg:pt-28">
+    <section id="top" className="hero-enter rule-b pt-20 sm:pt-24 lg:pt-28">
       {/* Top Ticker Bar */}
       <div className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
-        <div className="rule-b flex flex-col gap-2 pb-3 eyebrow text-ink/70 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 tracking-eyebrow text-xs">
+        <div className="hero-enter-item rule-b flex flex-col gap-2 pb-3 eyebrow text-ink/70 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 tracking-eyebrow text-xs">
           <span className="text-ink font-semibold flex items-center gap-2">
             <span className="inline-block h-2 w-2 bg-primary"></span>
             {profileData.tagline}
@@ -34,13 +34,13 @@ export default function Hero({ onOpenResume }) {
         <div className="order-1 mx-auto flex w-full max-w-[110rem] flex-col justify-center px-5 pb-10 pt-8 sm:px-8 sm:pb-14 lg:order-1 lg:mx-0 lg:max-w-none lg:px-12 lg:py-14">
           <h1 className="d-hero max-w-[14ch]">
             <span className="block">
-              <span className="block text-ink">TURNING.</span>
-              <span className="block text-primary">RAW DATA.</span>
-              <span className="block text-ink">INTO REVENUE.</span>
+              <span className="hero-title-line block"><span className="hero-title-text text-ink">TURNING.</span></span>
+              <span className="hero-title-line block"><span className="hero-title-text text-primary">RAW DATA.</span></span>
+              <span className="hero-title-line block"><span className="hero-title-text text-ink">INTO REVENUE.</span></span>
             </span>
           </h1>
 
-          <div className="mt-8 max-w-2xl border-l-2 border-primary pl-5 sm:mt-9 sm:pl-6">
+          <div className="hero-enter-item mt-8 max-w-2xl border-l-2 border-primary pl-5 sm:mt-9 sm:pl-6">
             <p className="text-base sm:text-[1.0625rem] leading-relaxed text-ink/85 font-normal">
               <span className="mb-2 block font-semibold text-ink">I'm Lochan Havalimane.</span>
               {profileData.leadStory}
@@ -48,7 +48,7 @@ export default function Hero({ onOpenResume }) {
           </div>
 
           {/* Action Button Row */}
-          <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
+          <div className="hero-enter-item mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#work"
               className="group inline-flex items-center gap-3 bg-ink px-6 py-4 eyebrow text-xs text-cream transition-all duration-300 hover:bg-primary hover:text-white"
@@ -66,7 +66,7 @@ export default function Hero({ onOpenResume }) {
           </div>
         </div>
 
-        <div className="order-2 lg:order-2 flex items-center justify-center border-t border-rule bg-cream-card px-5 pb-10 pt-6 sm:px-8 sm:pb-12 lg:border-l lg:border-t-0 lg:p-6">
+        <div className="hero-enter-image order-2 lg:order-2 flex items-center justify-center border-t border-rule bg-cream-card px-5 pb-10 pt-6 sm:px-8 sm:pb-12 lg:border-l lg:border-t-0 lg:p-6">
           <div className="w-full max-w-[34rem] overflow-hidden rounded-[1.75rem] border border-rule bg-white shadow-[0_24px_60px_rgba(13,18,26,0.12)]">
             <img
               src={heroImage}

@@ -113,7 +113,7 @@ GROUP BY gender;`
   const innerClass = embedded ? "" : "mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12";
 
   return (
-    <section id={embedded ? undefined : "livedata"} className={wrapperClass}>
+    <section id={embedded ? undefined : "livedata"} className={`${wrapperClass} page-reveal`}>
       <div className={innerClass}>
         <div className="space-y-8">
           {!embedded && (
@@ -123,7 +123,7 @@ GROUP BY gender;`
                   <span className="h-2 w-2 shrink-0 bg-primary" aria-hidden="true"></span>
                   <span className="eyebrow text-ink/70 tracking-eyebrow text-xs">Live Analytics Explorer</span>
                 </div>
-                <h2 className="d-1 mt-4">
+                <h2 className="heading-reveal d-1 mt-4">
                   <span className="block text-ink">INTERACTIVE</span>
                   <span className="block text-primary">DATA INSIGHTS.</span>
                 </h2>
