@@ -1,4 +1,5 @@
 ﻿import React from "react";
+import ScrollReveal, { RevealItem } from "./ScrollReveal";
 
 export default function Process() {
   const steps = [
@@ -25,23 +26,23 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="page-reveal rule-b py-12 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
-        <div className="flex items-center gap-3">
+    <section id="process" className="rule-b py-12 sm:py-16 lg:py-20">
+      <ScrollReveal className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
+        <RevealItem className="flex items-center gap-3">
           <span className="h-2 w-2 shrink-0 bg-primary" aria-hidden="true"></span>
           <span className="eyebrow text-ink/70 tracking-eyebrow text-xs">Analytical Methodology</span>
-        </div>
+        </RevealItem>
 
-        <h2 className="heading-reveal d-1 mt-4">
+        <RevealItem as="h2" className="d-1 mt-4">
           <span className="block">
             <span className="block text-ink">A PROCESS THAT</span>
             <span className="block text-primary">SURVIVES MESSY DATA.</span>
           </span>
-        </h2>
+        </RevealItem>
 
-        <ol className="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+        <ScrollReveal as="ol" className="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, idx) => (
-            <li key={idx} className="rule-t pt-5 border-t border-rule">
+            <RevealItem as="li" key={idx} className="rule-t pt-5 border-t border-rule">
               <div className="flex items-baseline gap-3">
                 <span className="d-2 text-primary font-display">{s.num}</span>
                 <h3 className="text-lg font-bold text-ink tracking-tight">{s.title}</h3>
@@ -49,10 +50,10 @@ export default function Process() {
               <p className="mt-4 text-xs sm:text-sm text-ink/75 leading-relaxed">
                 {s.desc}
               </p>
-            </li>
+            </RevealItem>
           ))}
-        </ol>
-      </div>
+        </ScrollReveal>
+      </ScrollReveal>
     </section>
   );
 }

@@ -14,6 +14,7 @@ import JupyterLogo from "../assets/stack/Jupyter.png";
 import VSCodeLogo from "../assets/stack/VS_Code.png";
 import GitLogo from "../assets/stack/Git.png";
 import GitHubLogo from "../assets/stack/GitHub.png";
+import ScrollReveal, { RevealItem } from "./ScrollReveal";
 
 const stackGroups = [
   {
@@ -55,35 +56,35 @@ const stackGroups = [
 
 export default function TechStack() {
   return (
-    <section id="stack" className="page-reveal rule-b py-5 sm:py-6 lg:py-8">
-      <div className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
-        <div className="flex items-center gap-3">
+    <section id="stack" className="rule-b py-5 sm:py-6 lg:py-8">
+      <ScrollReveal className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
+        <RevealItem className="flex items-center gap-3">
           <span className="h-2 w-2 shrink-0 bg-primary" aria-hidden="true"></span>
           <span className="eyebrow text-ink/70 tracking-eyebrow text-xs">Technical Toolbelt</span>
-        </div>
+        </RevealItem>
 
-        <h2 className="heading-reveal d-1 mt-4">
+        <RevealItem as="h2" className="d-1 mt-4">
           <span className="block">
             <span className="block text-ink">THE TOOLS I</span>
             <span className="block text-primary">REACH FOR.</span>
           </span>
-        </h2>
+        </RevealItem>
 
-        <div className="mt-7 space-y-0">
+        <ScrollReveal className="mt-7 space-y-0">
           {stackGroups.map((group) => (
-            <div
+            <RevealItem
               key={group.name}
               className="rule-t py-3 sm:py-4 lg:grid lg:grid-cols-[22%_78%] lg:items-center lg:gap-6"
             >
-              <div className="mb-2 lg:mb-0">
+              <RevealItem className="mb-2 lg:mb-0">
                 <h3 className="eyebrow text-primary text-[0.68rem] font-bold tracking-[0.18em] text-left">
                   {group.name}
                 </h3>
-              </div>
+              </RevealItem>
 
-              <div className="flex min-w-0 flex-wrap items-start justify-start gap-x-5 gap-y-4 sm:gap-x-6 sm:gap-y-5">
+              <ScrollReveal className="flex min-w-0 flex-wrap items-start justify-start gap-x-5 gap-y-4 sm:gap-x-6 sm:gap-y-5">
                 {group.items.map((item) => (
-                  <div
+                  <RevealItem
                     key={item.name}
                     className="flex w-[86px] min-w-[86px] flex-col items-center justify-start text-center sm:w-[96px] lg:w-[104px]"
                   >
@@ -95,13 +96,13 @@ export default function TechStack() {
                     <span className="mt-2 text-[10px] leading-tight text-ink/80 sm:text-[11px] lg:text-[12px]">
                       {item.name}
                     </span>
-                  </div>
+                  </RevealItem>
                 ))}
-              </div>
-            </div>
+              </ScrollReveal>
+            </RevealItem>
           ))}
-        </div>
-      </div>
+        </ScrollReveal>
+      </ScrollReveal>
     </section>
   );
 }

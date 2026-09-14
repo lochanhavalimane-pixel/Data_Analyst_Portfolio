@@ -19,7 +19,6 @@ export default function Header({ onOpenResume }) {
     { name: "Experience", href: "#experience" },
     { name: "Work", href: "#work" },
     { name: "Stack", href: "#stack" },
-    { name: "Education", href: "#education" },
     { name: "Contact", href: "#contact" },
   ];
 

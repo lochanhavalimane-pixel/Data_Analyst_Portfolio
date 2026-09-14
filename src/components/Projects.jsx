@@ -1,41 +1,46 @@
 ﻿import React, { useState } from "react";
 import { projectsData } from "../data/projectsData";
 import ProjectModal from "./ProjectModal";
-import { ArrowUpRight, BarChart2, Layers } from "lucide-react";
+import ScrollReveal, { RevealItem } from "./ScrollReveal";
 
 export default function Projects() {
   const [activeProject, setActiveProject] = useState(null);
 
   return (
-    <section id="work" className="page-reveal rule-b py-12 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
+    <section id="work" className="rule-b py-12 sm:py-16 lg:py-20">
+      <ScrollReveal className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
-          <div>
-            <div className="flex items-center gap-3">
-              <span className="h-2 w-2 shrink-0 bg-primary" aria-hidden="true"></span>
-              <span className="eyebrow text-ink/70 tracking-eyebrow text-xs">Selected Portfolio</span>
+          <RevealItem>
+            <div>
+              <div className="flex items-center gap-3">
+                <span className="h-2 w-2 shrink-0 bg-primary" aria-hidden="true"></span>
+                <span className="eyebrow text-ink/70 tracking-eyebrow text-xs">Selected Portfolio</span>
+              </div>
+              <h2 className="d-1 mt-4">
+                <span className="block text-ink">INSIGHTS, NOT</span>
+                <span className="block text-primary">SIDE PROJECTS.</span>
+              </h2>
             </div>
-            <h2 className="heading-reveal d-1 mt-4">
-              <span className="block text-ink">INSIGHTS, NOT</span>
-              <span className="block text-primary">SIDE PROJECTS.</span>
-            </h2>
-          </div>
-          <p className="max-w-md text-sm sm:text-base text-muted">
-            Production-grade exploratory data analyses, SQL pipelines, and Power BI dashboards built to resolve real operational and commercial bottlenecks.
-          </p>
+          </RevealItem>
+
+          <RevealItem>
+            <p className="max-w-md text-sm sm:text-base text-muted">
+              Production-grade exploratory data analyses, SQL pipelines, and Power BI dashboards built to resolve real operational and commercial bottlenecks.
+            </p>
+          </RevealItem>
         </div>
 
         {/* Project Cards Grid */}
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+        <ScrollReveal className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
           {projectsData.map((project) => (
-            <article
+            <RevealItem
               key={project.id}
-              onClick={() => setActiveProject(project)}
+              as="article"
               className="group relative flex flex-col justify-between border border-rule bg-cream-card p-6 sm:p-8 cursor-pointer transition-all duration-300 hover:border-ink hover:shadow-md"
+              onClick={() => setActiveProject(project)}
             >
               <div>
-                {/* Header row */}
                 <div className="flex items-center justify-between border-b border-rule pb-3">
                   <span className="eyebrow text-xs font-mono text-muted">
                     {project.number} · {project.year}
@@ -45,7 +50,6 @@ export default function Projects() {
                   </span>
                 </div>
 
-                {/* Title */}
                 <h3 className="d-3 mt-4 text-ink group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
@@ -53,12 +57,10 @@ export default function Projects() {
                   {project.subtitle}
                 </p>
 
-                {/* Summary */}
                 <p className="mt-3 text-sm text-ink/80 leading-relaxed">
                   {project.summary}
                 </p>
 
-                {/* High-Impact Metrics Ticker */}
                 <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2 bg-white p-3 border border-rule">
                   {project.metrics.map((m, i) => (
                     <div key={i} className="border-l border-primary/50 pl-2">
@@ -69,7 +71,6 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Card Footer: Tech tags & Action */}
               <div className="mt-6 pt-4 border-t border-rule flex flex-wrap items-center justify-between gap-3">
                 <div className="flex flex-wrap gap-1.5">
                   {project.tags.slice(0, 4).map((t, idx) => (
@@ -88,10 +89,10 @@ export default function Projects() {
                   View Full Case Study →
                 </span>
               </div>
-            </article>
+            </RevealItem>
           ))}
-        </div>
-      </div>
+        </ScrollReveal>
+      </ScrollReveal>
 
       {/* Case Study Modal */}
       {activeProject && (

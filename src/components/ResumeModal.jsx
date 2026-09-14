@@ -1,5 +1,5 @@
 ﻿import React, { useEffect } from "react";
-import { X, Printer, Download, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { X, Download } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 import { profileData } from "../data/profileData";
 
@@ -20,10 +20,6 @@ export default function ResumeModal({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
-  const handlePrint = () => {
-    window.print();
-  };
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/80 backdrop-blur-sm p-4 sm:p-6 overflow-y-auto">
       <div
@@ -37,13 +33,15 @@ export default function ResumeModal({ isOpen, onClose }) {
             • Data Analyst
           </span>
           <div className="flex items-center gap-3">
-            <button
-              onClick={handlePrint}
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-rule hover:border-primary hover:text-primary text-xs font-mono transition-colors"
+            <a
+              href="/Lochan_Havalimane_Resume.pdf"
+              download="Lochan_Havalimane_Resume.pdf"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-rule bg-ink text-cream text-xs font-mono transition-colors hover:bg-primary hover:text-cream hover:border-primary"
+              aria-label="Download resume PDF"
             >
-              <Printer className="w-3.5 h-3.5" />
-              <span>Print / Save PDF</span>
-            </button>
+              <Download className="w-3.5 h-3.5" />
+              <span>Download</span>
+            </a>
             <button
               onClick={onClose}
               className="p-1.5 border border-rule hover:bg-ink hover:text-cream transition-colors"
@@ -91,38 +89,18 @@ export default function ResumeModal({ isOpen, onClose }) {
               EDUCATION
             </h2>
             <div className="space-y-4">
-              <div>
-                <div className="flex justify-between items-baseline text-xs sm:text-sm">
-                  <span className="font-bold text-ink">Anjuman Institute Of Technology And Management, Bhatkal</span>
-                  <span className="font-mono text-muted text-xs">2023 — 2027</span>
+              {profileData.education.map((edu, idx) => (
+                <div key={idx}>
+                  <div className="flex justify-between items-baseline text-xs sm:text-sm">
+                    <span className="font-bold text-ink">{edu.institution}{edu.location ? `, ${edu.location}` : ""}</span>
+                    <span className="font-mono text-muted text-xs">{edu.period}</span>
+                  </div>
+                  <div className="flex justify-between text-xs text-ink/80 mt-0.5 gap-2">
+                    <span>{edu.degree}</span>
+                    <span className="font-mono font-semibold text-primary whitespace-nowrap">{edu.score}</span>
+                  </div>
                 </div>
-                <div className="flex justify-between text-xs text-ink/80 mt-0.5">
-                  <span>Bachelor of Engineering in Computer Science (CSE)</span>
-                  <span className="font-mono font-semibold text-primary">CGPA: 7.32</span>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex justify-between items-baseline text-xs sm:text-sm">
-                  <span className="font-bold text-ink">SDM College, Ujire</span>
-                  <span className="font-mono text-muted text-xs">2021 — 2023</span>
-                </div>
-                <div className="flex justify-between text-xs text-ink/80 mt-0.5">
-                  <span>Pre-University Course (PCMS)</span>
-                  <span className="font-mono font-semibold text-primary">Percentage: 90.33%</span>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex justify-between items-baseline text-xs sm:text-sm">
-                  <span className="font-bold text-ink">Anand Ashram High School, Bhatkal</span>
-                  <span className="font-mono text-muted text-xs">2020 — 2021</span>
-                </div>
-                <div className="flex justify-between text-xs text-ink/80 mt-0.5">
-                  <span>SSLC</span>
-                  <span className="font-mono font-semibold text-primary">Percentage: 87.2%</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
