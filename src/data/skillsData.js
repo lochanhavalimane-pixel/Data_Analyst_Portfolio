@@ -27,6 +27,15 @@
       ]
     },
     {
+      name: "Tools & Environment",
+      skills: [
+        { name: "Jupyter Notebook", level: "Daily Driver", note: "Interactive exploratory notebooks, documentation, reproducible analysis" },
+        { name: "VS Code", level: "Daily Driver", note: "Python scripting, environment management, SQL extensions" },
+        { name: "Git", level: "Advanced", note: "Version control, branching, clean commits, conflict resolution" },
+        { name: "GitHub", level: "Advanced", note: "Code repositories, portfolio showcasing, project documentation" }
+      ]
+    },
+    {
       name: "Statistical Analysis & Methodologies",
       skills: [
         { name: "Data Cleaning", level: "Core Skill", note: "Outlier detection, null imputation, data validation, deduplication" },
@@ -44,15 +53,6 @@
         { name: "Classification", level: "Proficient", note: "Churn prediction, customer conversion scoring, decision trees" },
         { name: "Clustering", level: "Proficient", note: "K-Means, customer persona segmentation, RFM cluster analysis" },
         { name: "Feature Engineering", level: "Advanced", note: "One-hot encoding, scaling, interaction terms, date-part extraction" }
-      ]
-    },
-    {
-      name: "Tools & Environment",
-      skills: [
-        { name: "Jupyter Notebook", level: "Daily Driver", note: "Interactive exploratory notebooks, documentation, reproducible analysis" },
-        { name: "VS Code", level: "Daily Driver", note: "Python scripting, environment management, SQL extensions" },
-        { name: "Git", level: "Advanced", note: "Version control, branching, clean commits, conflict resolution" },
-        { name: "GitHub", level: "Advanced", note: "Code repositories, portfolio showcasing, project documentation" }
       ]
     }
   ]
