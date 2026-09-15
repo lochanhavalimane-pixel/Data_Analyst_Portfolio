@@ -19,16 +19,13 @@ export default function About() {
               <span className="block">
                 <span className="block text-ink">DATA ANALYST,</span>
                 <span className="block text-primary">PYTHON & SQL DEVELOPER</span>
-                <span className="block text-primary">& BI SPECIALIST.</span>
+                <span className="block text-primary">& BI ENTHUSIAST.</span>
               </span>
             </RevealItem>
 
             <ScrollReveal className="mt-6 space-y-4 text-ink/80 text-base sm:text-[1.0625rem] leading-relaxed">
               <RevealItem as="p">
-                {profileData.summary}
-              </RevealItem>
-              <RevealItem as="p" className="text-muted">
-                I believe data without business context is just noise. Whether cleaning null values in Pandas, writing nested subqueries and window functions in MySQL, or creating dynamic DAX measures in Power BI, my goal is always the same: surface the non-obvious truth that empowers leadership to make faster, higher-ROI moves.
+                My focus is simple: replace guesswork with reliable data. From writing performant SQL subqueries to building interactive Power BI visuals, I help bridge the gap between backend numbers and business strategy. I love taking complex datasets and making them simple, clear, and actionable.
               </RevealItem>
             </ScrollReveal>
 
