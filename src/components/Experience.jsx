@@ -4,7 +4,7 @@ import ScrollReveal, { RevealItem } from "./ScrollReveal";
 
 export default function Experience() {
   return (
-    <section id="experience" className="rule-b py-12 sm:py-16 lg:py-20">
+    <section id="certifications" className="rule-b py-12 sm:py-16 lg:py-20">
       <ScrollReveal className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
         <RevealItem className="grid gap-10 lg:grid-cols-[0.32fr_0.68fr] lg:gap-14">
           {/* Left Column: Sticky Title */}
@@ -15,8 +15,9 @@ export default function Experience() {
             </div>
             <h2 className="d-1 mt-4">
               <span className="block">
-                <span className="block text-ink">WHERE I'VE</span>
-                <span className="block text-primary">TRAINED &amp; SHIPPED.</span>
+                <span className="block text-ink">PROOF OF</span>
+                <span className="block text-primary">SKILL &amp;</span>
+                <span className="block text-primary">PRACTICE.</span>
               </span>
             </h2>
             <p className="mt-4 text-sm text-muted leading-relaxed">
@@ -89,6 +90,17 @@ export default function Experience() {
                     </>
                   )}
                 </ScrollReveal>
+
+                <div className="mt-5 flex justify-end">
+                  <a
+                    href={item.certificate}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-bold uppercase text-muted opacity-70 underline underline-offset-4 transition-opacity duration-300 hover:opacity-100"
+                  >
+                    View Certificate ↗
+                  </a>
+                </div>
               </RevealItem>
             ))}
           </ScrollReveal>

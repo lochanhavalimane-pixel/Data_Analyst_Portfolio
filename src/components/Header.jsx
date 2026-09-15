@@ -16,7 +16,7 @@ export default function Header({ onOpenResume }) {
   const navLinks = [
     { name: "Home", href: "#top" },
     { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
+    { name: "Certifications", href: "#certifications" },
     { name: "Work", href: "#work" },
     { name: "Stack", href: "#stack" },
     { name: "Contact", href: "#contact" },

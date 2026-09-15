@@ -47,6 +47,7 @@
       title: "Data Analytics Job Simulation",
       organization: "Quantium (Forage)",
       date: "Aug 2026",
+      certificate: "/certificates/quantium-certificate.pdf",
       skills: ["Commercial Analytics", "Transaction Data Cleaning", "Customer Segmentation", "A/B Testing Metrics", "Report Writing"],
       description: "Delivered data analysis on customer transaction datasets for major supermarket chains. Conducted customer segmentation, benchmarked chip sales metrics, assessed trial store performance against control groups, and synthesized findings into executive slide packs."
     },
@@ -54,6 +55,7 @@
       title: "Data Analytics Job Simulation",
       organization: "Deloitte (Forage)",
       date: "Jun 2026",
+      certificate: "/certificates/deloitte-certificate.pdf",
       skills: ["Forensic Analytics", "Data Visualization", "Tableau / BI Reporting", "Anomaly Detection"],
       description: "Analyzed corporate operational datasets to uncover procedural anomalies and financial discrepancies. Built interactive executive summary dashboards and structured evidence-based recommendations."
     },
@@ -61,6 +63,7 @@
       title: "Networking Basics",
       organization: "Cisco Networking Academy",
       date: "Nov 2025",
+      certificate: "/certificates/cisco-networking-basics.pdf",
       skills: ["Network Topologies", "Protocols (TCP/IP, UDP)", "Packet Analysis", "Infrastructure"],
       description: "Mastered core network architectures, routing fundamentals, OSI layers, and data transfer protocols crucial for distributed data systems and cloud ETL pipelines."
     }
