@@ -15,7 +15,7 @@ export default function Projects() {
             <div>
               <div className="flex items-center gap-3">
                 <span className="h-2 w-2 shrink-0 bg-primary" aria-hidden="true"></span>
-                <span className="eyebrow text-ink/70 tracking-eyebrow text-xs">Selected Portfolio</span>
+                <span className="eyebrow text-ink/70 tracking-eyebrow text-xs">Case Studies</span>
               </div>
               <h2 className="d-1 mt-4">
                 <span className="block text-ink">INSIGHTS, NOT</span>

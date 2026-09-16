@@ -26,18 +26,24 @@ export default function ProjectModal({ project, onClose }) {
         aria-modal="true"
       >
         {/* Top Bar */}
-        <div className="flex items-center justify-between border-b border-rule pb-4">
-          <div className="flex items-center gap-3">
+        <div className="relative border-b border-rule pb-4">
+          <div className="flex items-center justify-between gap-3 md:hidden">
             <span className="eyebrow text-xs font-mono text-primary font-bold">
               CASE STUDY {project.number}
             </span>
-            <span className="text-muted">•</span>
+            <button
+              onClick={onClose}
+              className="p-1.5 border border-rule hover:bg-ink hover:text-cream transition-colors"
+              aria-label="Close modal"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+
+          <div className="mt-2 flex items-center justify-between gap-3 md:hidden">
             <span className="eyebrow text-xs text-muted font-semibold">
               {project.category}
             </span>
-          </div>
-
-          <div className="flex items-center gap-3">
             {project.github && (
               <a
                 href={project.github}
@@ -49,6 +55,31 @@ export default function ProjectModal({ project, onClose }) {
                 <span>Repository</span>
               </a>
             )}
+          </div>
+
+          <div className="hidden items-center justify-between md:flex">
+            <div className="flex items-center gap-3">
+              <span className="eyebrow text-xs font-mono text-primary font-bold">
+                CASE STUDY {project.number}
+              </span>
+              <span className="text-muted">•</span>
+              <span className="eyebrow text-xs text-muted font-semibold">
+                {project.category}
+              </span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 border border-rule hover:border-primary hover:text-primary text-xs font-mono transition-colors"
+                >
+                  <GithubIcon className="w-3.5 h-3.5" />
+                  <span>Repository</span>
+                </a>
+              )}
             <button
               onClick={onClose}
               className="p-1.5 border border-rule hover:bg-ink hover:text-cream transition-colors"
@@ -56,6 +87,7 @@ export default function ProjectModal({ project, onClose }) {
             >
               <X className="w-5 h-5" />
             </button>
+            </div>
           </div>
         </div>
 

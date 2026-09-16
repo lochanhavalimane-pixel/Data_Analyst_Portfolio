@@ -59,10 +59,10 @@ export default function ResumeModal({ isOpen, onClose }) {
             <h1 className="heading-reveal text-3xl sm:text-4xl font-display uppercase tracking-tight text-ink">
               {profileData.name}
             </h1>
-            <p className="mt-1 text-sm text-muted font-medium">
+            <p className="mt-1 hidden text-sm text-muted font-medium md:block">
               {profileData.location}
             </p>
-            <div className="mt-3 flex flex-wrap items-center justify-center gap-3 text-xs font-mono text-ink/80">
+            <div className="mt-3 hidden flex-wrap items-center justify-center gap-3 text-xs font-mono text-ink/80 md:flex md:flex-row">
               <a href={`tel:${profileData.phone}`} className="hover:text-primary">{profileData.phone}</a>
               <span>—</span>
               <a href={`mailto:${profileData.email}`} className="hover:text-primary">{profileData.email}</a>
@@ -70,6 +70,17 @@ export default function ResumeModal({ isOpen, onClose }) {
               <a href={profileData.linkedin} target="_blank" rel="noreferrer" className="text-primary hover:underline">LinkedIn</a>
               <span>—</span>
               <a href={profileData.github} target="_blank" rel="noreferrer" className="text-primary hover:underline">GitHub</a>
+            </div>
+            <div className="mt-3 flex flex-col items-center gap-1.5 text-[11px] font-mono text-ink/80 md:hidden">
+              <span className="whitespace-nowrap">{profileData.location}</span>
+              <a href={`tel:${profileData.phone}`} className="whitespace-nowrap hover:text-primary">{profileData.phone}</a>
+              <div className="flex items-center gap-1.5 whitespace-nowrap">
+                <a href={`mailto:${profileData.email}`} className="hover:text-primary">{profileData.email}</a>
+                <span>–</span>
+                <a href={profileData.linkedin} target="_blank" rel="noreferrer" className="text-primary hover:underline">LinkedIn</a>
+                <span>–</span>
+                <a href={profileData.github} target="_blank" rel="noreferrer" className="text-primary hover:underline">GitHub</a>
+              </div>
             </div>
           </div>
 

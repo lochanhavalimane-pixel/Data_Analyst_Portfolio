@@ -4,12 +4,13 @@ import { profileData } from "../data/profileData";
 import heroImage from "../assets/hero.png";
 
 export default function Hero({ onOpenResume }) {
+  const heroSkills = profileData.tagline.split(" • ");
 
   return (
     <section id="top" className="hero-enter rule-b pt-20 sm:pt-24 lg:pt-28">
       {/* Top Ticker Bar */}
       <div className="mx-auto max-w-[110rem] px-5 sm:px-8 lg:px-12">
-        <div className="hero-enter-item rule-b flex flex-col gap-2 pb-3 eyebrow text-ink/70 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 tracking-eyebrow text-xs">
+        <div className="hero-enter-item rule-b hidden flex-col gap-2 pb-3 eyebrow text-ink/70 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 tracking-eyebrow text-xs md:flex">
           <span className="text-ink font-semibold flex items-center gap-2">
             <span className="inline-block h-2 w-2 bg-primary"></span>
             {profileData.tagline}
@@ -25,6 +26,26 @@ export default function Hero({ onOpenResume }) {
               {profileData.availability}
             </span>
           </span>
+        </div>
+        <div className="hero-enter-item rule-b mb-4 flex flex-col gap-3 pb-3 eyebrow text-ink/70 tracking-eyebrow md:hidden">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-[11px] leading-tight tracking-[0.08em]">
+            {heroSkills.map((skill) => (
+              <span key={skill} className="flex items-start gap-1.5">
+                <span className="text-primary" aria-hidden="true">•</span>
+                <span>{skill}</span>
+              </span>
+            ))}
+          </div>
+          <div className="flex items-center justify-between gap-3 border-t border-rule pt-3 text-[11px] leading-tight tracking-[0.08em]">
+            <span>{profileData.location}</span>
+            <span className="inline-flex items-center gap-1.5 text-primary font-bold">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              {profileData.availability}
+            </span>
+          </div>
         </div>
       </div>
 
