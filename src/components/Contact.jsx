@@ -38,7 +38,7 @@ export default function Contact() {
 
           <RevealItem className="grid gap-8 sm:grid-cols-2 lg:gap-8">
             <RevealItem>
-              <h3 className="eyebrow text-primary text-xs font-bold tracking-eyebrow">
+              <h3 className="eyebrow font-mono text-[0.7rem] text-[#9CA3AF]">
                 Have an Opportunity?
               </h3>
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#9CA3AF]">

@@ -137,10 +137,10 @@ export default function ProjectModal({ project, onClose }) {
             <span className="h-2 w-2 bg-primary"></span>
             <span>Data Pipeline &amp; Cleaning Steps</span>
           </h3>
-          <ul className="mt-4 space-y-2.5">
+          <ul className="mt-4 space-y-2.5 pl-2">
             {project.pipeline.map((step, idx) => (
               <li key={idx} className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-sm text-ink/80">
-                <span className="mt-[0.45em] h-2 w-2 bg-primary shrink-0"></span>
+                <span className="text-primary font-semibold" aria-hidden="true">-&gt;</span>
                 <span>{step}</span>
               </li>
             ))}
@@ -161,7 +161,7 @@ export default function ProjectModal({ project, onClose }) {
           </h3>
           <div className="mt-4 space-y-3">
             {project.keyInsights.map((insight, idx) => (
-              <div key={idx} className="p-3.5 bg-white border border-rule flex items-start gap-3">
+              <div key={idx} className="flex items-start gap-3">
                 <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-ink/85 leading-relaxed">{insight}</p>
               </div>
