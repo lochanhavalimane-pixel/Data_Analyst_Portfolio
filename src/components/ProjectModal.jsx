@@ -1,9 +1,17 @@
-﻿import React, { useEffect } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { X, ExternalLink, CheckCircle2, BarChart2 } from "lucide-react";
 import { GithubIcon } from "./Icons";
 import InteractiveDemo from "./InteractiveDemo";
 
 export default function ProjectModal({ project, onClose }) {
+  const [showBottomClose, setShowBottomClose] = useState(false);
+
+  const handleModalScroll = (event) => {
+    const container = event.currentTarget;
+    const distanceFromBottom = container.scrollHeight - container.scrollTop - container.clientHeight;
+    setShowBottomClose(distanceFromBottom <= 100);
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") onClose();
@@ -22,6 +30,7 @@ export default function ProjectModal({ project, onClose }) {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/80 backdrop-blur-sm p-4 sm:p-6 overflow-y-auto">
       <div
         className="relative w-full max-w-4xl max-h-[90vh] bg-cream border border-ink overflow-y-auto shadow-2xl p-6 sm:p-10 text-ink"
+        onScroll={handleModalScroll}
         role="dialog"
         aria-modal="true"
       >
@@ -157,7 +166,6 @@ export default function ProjectModal({ project, onClose }) {
                 <p className="text-xs sm:text-sm text-ink/85 leading-relaxed">{insight}</p>
               </div>
             ))}
-          </div>
         </div>
 
         {/* Tech Tags */}
@@ -168,6 +176,33 @@ export default function ProjectModal({ project, onClose }) {
             </span>
           ))}
         </div>
+
+        <div
+          className={`mt-8 flex w-full items-center justify-between gap-3 pb-8 pointer-events-none transition-opacity duration-300 ${
+            showBottomClose ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pointer-events-auto flex shrink-0 items-center gap-1.5 bg-[#E6E4DD] px-3 py-1.5 border border-rule hover:border-primary hover:text-primary text-xs font-mono transition-colors"
+            >
+              <GithubIcon className="w-3.5 h-3.5" />
+              <span>View Source Repository</span>
+            </a>
+          )}
+          <button
+            onClick={onClose}
+            className="pointer-events-auto flex shrink-0 items-center gap-1.5 bg-[#E6E4DD] px-3 py-1.5 border border-rule hover:border-primary hover:text-primary text-xs font-mono transition-colors"
+            aria-label="Close project"
+          >
+            <X className="w-3.5 h-3.5" />
+            <span>Close Project</span>
+          </button>
+        </div>
+          </div>
       </div>
     </div>
   );

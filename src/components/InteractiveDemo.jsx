@@ -1,5 +1,5 @@
 ﻿import React, { useState } from "react";
-import { BarChart3, Filter, Code2, Copy, Check, Sparkles, ArrowRight } from "lucide-react";
+import { BarChart3, Filter, Code2, Copy, Check, Sparkles } from "lucide-react";
 
 export default function InteractiveDemo({ embedded = false }) {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -310,15 +310,6 @@ GROUP BY gender;`
                   </div>
                 </div>
 
-                <div className="mt-6 pt-6 border-t border-rule">
-                  <a
-                    href="#work"
-                    className="w-full text-center group flex items-center justify-center gap-2 bg-ink py-3 px-4 eyebrow text-xs text-cream hover:bg-primary transition-colors"
-                  >
-                    <span>Read Full Case Study</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                  </a>
-                </div>
               </div>
             </div>
           ) : (
