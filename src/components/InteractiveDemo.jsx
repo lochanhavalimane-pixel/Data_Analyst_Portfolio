@@ -8,7 +8,8 @@ export default function InteractiveDemo({ embedded = false }) {
 
   const categoryData = {
     all: {
-      categoryName: "All Product Categories (3,900 Transactions)",
+      categoryName: "All Product Categories",
+      transactionCount: "(3,900 Transactions)",
       maleRev: 157.9,
       femaleRev: 75.2,
       totalOrders: 3900,
@@ -31,7 +32,8 @@ GROUP BY gender
 ORDER BY revenue_k DESC;`
     },
     clothing: {
-      categoryName: "Clothing & Outerwear (1,730 Transactions)",
+      categoryName: "Clothing & Outerwear",
+      transactionCount: "(1,730 Transactions)",
       maleRev: 74.8,
       femaleRev: 32.4,
       totalOrders: 1730,
@@ -53,7 +55,8 @@ WHERE category = 'Clothing'
 GROUP BY gender;`
     },
     footwear: {
-      categoryName: "Footwear & Boots (960 Transactions)",
+      categoryName: "Footwear & Boots",
+      transactionCount: "(960 Transactions)",
       maleRev: 42.1,
       femaleRev: 21.6,
       totalOrders: 960,
@@ -75,7 +78,8 @@ WHERE category = 'Footwear'
 GROUP BY gender;`
     },
     accessories: {
-      categoryName: "Accessories & Gear (1,210 Transactions)",
+      categoryName: "Accessories & Gear",
+      transactionCount: "(1,210 Transactions)",
       maleRev: 41.0,
       femaleRev: 21.2,
       totalOrders: 1210,
@@ -199,7 +203,10 @@ GROUP BY gender;`
                 <div>
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-rule pb-4">
                     <div>
-                      <h3 className="text-lg font-bold text-ink">{current.categoryName}</h3>
+                      <h3 className="text-lg font-bold text-ink">
+                        <span className="block">{current.categoryName}</span>
+                        <span className="block whitespace-nowrap">{current.transactionCount}</span>
+                      </h3>
                       <p className="text-xs font-mono text-muted mt-0.5">Demographic Revenue Discrepancy</p>
                     </div>
                     <div className="text-right">
@@ -216,7 +223,7 @@ GROUP BY gender;`
                           <span>Male Customers ({current.maleOrders.toLocaleString()} Orders)</span>
                         </span>
                         <span className="font-mono font-bold text-primary">
-                          ${current.maleRev}K ({malePct}%)
+                          ${current.maleRev}K
                         </span>
                       </div>
                       <div className="h-8 w-full bg-cream border border-rule overflow-hidden relative">
@@ -227,9 +234,8 @@ GROUP BY gender;`
                           <span className="text-[0.7rem] font-mono text-white font-bold">{malePct}%</span>
                         </div>
                       </div>
-                      <div className="mt-1.5 flex justify-between text-xs font-mono text-muted">
+                      <div className="mt-1.5 text-xs font-mono text-muted">
                         <span>Avg Order Value: ${current.maleAOV.toFixed(2)}</span>
-                        <span>Share of Segment: {malePct}%</span>
                       </div>
                     </div>
 
@@ -240,7 +246,7 @@ GROUP BY gender;`
                           <span>Female Customers ({current.femaleOrders.toLocaleString()} Orders)</span>
                         </span>
                         <span className="font-mono font-bold text-ink">
-                          ${current.femaleRev}K ({femalePct}%)
+                          ${current.femaleRev}K
                         </span>
                       </div>
                       <div className="h-8 w-full bg-cream border border-rule overflow-hidden relative">
@@ -251,9 +257,8 @@ GROUP BY gender;`
                           <span className="text-[0.7rem] font-mono text-white font-bold">{femalePct}%</span>
                         </div>
                       </div>
-                      <div className="mt-1.5 flex justify-between text-xs font-mono text-muted">
+                      <div className="mt-1.5 text-xs font-mono text-muted">
                         <span>Avg Order Value: ${current.femaleAOV.toFixed(2)}</span>
-                        <span>Share of Segment: {femalePct}%</span>
                       </div>
                     </div>
                   </div>
