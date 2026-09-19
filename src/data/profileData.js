@@ -2,7 +2,7 @@
   name: "Lochan Havalimane",
   role: "Data Analyst",
   tagline: "Statistical Modeling • SQL & Python • Business Intelligence • Predictive Analytics",
-  location: "Bhatkal, Karnataka, India",
+  location: "Bengaluru, Karnataka, India",
   availability: "Open to work",
   email: "lochanhavalimane@gmail.com",
   phone: "+91-9019462077",

@@ -48,7 +48,7 @@ export default function Contact() {
 
             <ScrollReveal as="ul" className="space-y-6">
               <RevealItem as="li">
-                <p className="eyebrow font-mono text-[0.7rem] text-[#9CA3AF]">Direct Email</p>
+                <p className="eyebrow font-mono text-[0.7rem] text-[#9CA3AF]">Email</p>
                 <a
                   href={`mailto:${profileData.email}`}
                   className="link-wipe mt-1 inline-block text-cream hover:text-primary transition-colors text-sm font-medium font-mono"
