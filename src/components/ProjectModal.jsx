@@ -13,23 +13,30 @@ export default function ProjectModal({ project, onClose }) {
   };
 
   useEffect(() => {
+    const documentElementOverflowX = document.documentElement.style.overflowX;
+    const bodyOverflow = document.body.style.overflow;
+    const bodyOverflowX = document.body.style.overflowX;
     const handleKeyDown = (e) => {
       if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", handleKeyDown);
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflowX = "hidden";
+    document.body.style.overflowX = "hidden";
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "auto";
+      document.documentElement.style.overflowX = documentElementOverflowX;
+      document.body.style.overflow = bodyOverflow;
+      document.body.style.overflowX = bodyOverflowX;
     };
   }, [onClose]);
 
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/80 backdrop-blur-sm p-4 sm:p-6 overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex max-w-[100vw] items-center justify-center overflow-x-hidden overflow-y-auto bg-ink/80 backdrop-blur-sm p-0 sm:p-6">
       <div
-        className="relative w-full max-w-4xl max-h-[90vh] bg-cream border border-ink overflow-y-auto shadow-2xl p-6 sm:p-10 text-ink"
+        className="relative w-[95%] max-w-full max-h-[90vh] overflow-x-hidden overflow-y-auto border border-ink bg-cream p-3 text-ink shadow-2xl sm:w-full sm:max-w-4xl sm:p-10"
         onScroll={handleModalScroll}
         role="dialog"
         aria-modal="true"
@@ -101,7 +108,7 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {/* Title & Subtitle */}
-        <div className="mt-6">
+        <div className="mt-6 max-w-full">
           <h2 className="heading-reveal d-2 text-ink">
             {project.title}
           </h2>
@@ -111,7 +118,7 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {/* Key Metrics Grid */}
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 bg-white p-4 border border-rule">
+        <div className="mt-6 grid w-full max-w-full grid-cols-2 gap-3 border border-rule bg-white p-3 sm:grid-cols-4 sm:p-4">
           {project.metrics.map((m, i) => (
             <div key={i} className="border-l-2 border-primary pl-3">
               <span className="text-xs font-mono text-muted uppercase block">{m.label}</span>
@@ -126,7 +133,7 @@ export default function ProjectModal({ project, onClose }) {
             <span className="h-2 w-2 bg-primary"></span>
             <span>Business Problem Statement</span>
           </h3>
-          <p className="mt-3 text-sm sm:text-base text-ink/85 leading-relaxed bg-white/70 p-4 border border-rule">
+          <p className="mt-3 w-full max-w-full border border-rule bg-white/70 p-3 text-sm leading-relaxed text-ink/85 sm:p-4 sm:text-base">
             {project.problemStatement}
           </p>
         </div>
@@ -137,7 +144,7 @@ export default function ProjectModal({ project, onClose }) {
             <span className="h-2 w-2 bg-primary"></span>
             <span>Data Pipeline &amp; Cleaning Steps</span>
           </h3>
-          <ul className="mt-4 space-y-2.5 pl-2">
+          <ul className="mt-4 max-w-full space-y-2.5 pl-2">
             {project.pipeline.map((step, idx) => (
               <li key={idx} className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-sm text-ink/80">
                 <span className="text-primary font-semibold" aria-hidden="true">-&gt;</span>
@@ -148,7 +155,7 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {project.id === "customer-shopping-behaviour" && (
-          <div className="mt-8 border-t border-rule pt-6">
+          <div className="mt-8 max-w-full overflow-x-hidden border-t border-rule pt-6">
             <InteractiveDemo embedded />
           </div>
         )}
@@ -159,7 +166,7 @@ export default function ProjectModal({ project, onClose }) {
             <span className="h-2 w-2 bg-primary"></span>
             <span>Strategic Findings &amp; ROI Recommendations</span>
           </h3>
-          <div className="mt-4 space-y-3">
+          <div className="mt-4 max-w-full space-y-3">
             {project.keyInsights.map((insight, idx) => (
               <div key={idx} className="flex items-start gap-3">
                 <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
@@ -169,7 +176,7 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {/* Tech Tags */}
-        <div className="mt-8 pt-6 border-t border-rule flex flex-wrap gap-2">
+        <div className="mt-8 flex max-w-full flex-wrap gap-2 border-t border-rule pt-6">
           {project.tags.map((t, idx) => (
             <span key={idx} className="px-2.5 py-1 text-xs font-mono bg-ink text-cream">
               {t}
@@ -178,7 +185,7 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         <div
-          className={`mt-8 flex w-full items-center justify-between gap-3 pb-8 pointer-events-none transition-opacity duration-300 ${
+          className={`mt-8 flex w-full max-w-full flex-wrap items-center justify-between gap-3 pb-8 pointer-events-none transition-opacity duration-300 ${
             showBottomClose ? "opacity-100" : "opacity-0"
           }`}
         >

@@ -171,7 +171,7 @@ GROUP BY gender;`
             </div>
           )}
 
-          <div className={`flex flex-wrap items-center gap-2 ${embedded ? "border-t border-rule pt-4" : "border-y border-rule py-4"}`}>
+          <div className={`flex max-w-full flex-wrap items-center gap-2 ${embedded ? "border-t border-rule pt-4" : "border-y border-rule py-4"}`}>
             <span className="text-xs font-mono text-muted mr-2 flex items-center gap-1">
               <Filter className="w-3 h-3 text-primary" />
               <span>Filter Category:</span>
@@ -198,14 +198,14 @@ GROUP BY gender;`
           </div>
 
           {activeView === "chart" ? (
-            <div className="grid gap-8 lg:grid-cols-12 items-stretch">
-              <div className="lg:col-span-8 border border-rule bg-white p-6 sm:p-8 flex flex-col justify-between">
+            <div className="grid max-w-full gap-8 lg:grid-cols-12 items-stretch">
+              <div className="max-w-full lg:col-span-8 border border-rule bg-white p-6 sm:p-8 flex flex-col justify-between">
                 <div>
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-rule pb-4">
                     <div>
                       <h3 className="text-lg font-bold text-ink">
                         <span className="block">{current.categoryName}</span>
-                        <span className="block whitespace-nowrap">{current.transactionCount}</span>
+                        <span className="block max-w-full break-words">{current.transactionCount}</span>
                       </h3>
                       <p className="text-xs font-mono text-muted mt-0.5">Demographic Revenue Discrepancy</p>
                     </div>
@@ -282,7 +282,7 @@ GROUP BY gender;`
                 </div>
               </div>
 
-              <div className="lg:col-span-4 border border-rule bg-white p-6 sm:p-8 flex flex-col justify-between">
+              <div className="max-w-full lg:col-span-4 border border-rule bg-white p-6 sm:p-8 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-2 eyebrow text-xs text-primary font-bold tracking-wider">
                     <Sparkles className="w-4 h-4" />
