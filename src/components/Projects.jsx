@@ -1,4 +1,5 @@
 ﻿import React, { useState } from "react";
+import dashboardImg from "../assets/Screenshot (368).png";
 import { projectsData } from "../data/projectsData";
 import ProjectModal from "./ProjectModal";
 import ScrollReveal, { RevealItem } from "./ScrollReveal";
@@ -37,9 +38,13 @@ export default function Projects() {
             <RevealItem
               key={project.id}
               as="article"
-              className="group relative flex flex-col justify-between border border-rule bg-cream-card p-6 sm:p-8 cursor-pointer transition-all duration-300 hover:border-ink hover:shadow-md"
+              className="group relative flex h-auto flex-col justify-between rounded-2xl border border-neutral-300/60 bg-[#EFECE6] p-3 cursor-pointer transition-all duration-300 hover:border-ink hover:shadow-md"
               onClick={() => setActiveProject(project)}
             >
+              <div className="w-full aspect-[16/9] overflow-hidden rounded-lg mb-4">
+                <img src={dashboardImg} alt="Customer Behavior Dashboard" className="w-full h-full object-contain mx-auto" />
+              </div>
+              <div className="p-3">
               <div>
                 <div className="flex items-center justify-between border-b border-rule pb-3">
                   <span className="eyebrow text-xs font-mono text-muted">
@@ -61,14 +66,7 @@ export default function Projects() {
                   {project.summary}
                 </p>
 
-                <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2 bg-white p-3 border border-rule">
-                  {project.metrics.map((m, i) => (
-                    <div key={i} className="border-l border-primary/50 pl-2">
-                      <span className="text-[0.65rem] font-mono text-muted uppercase block">{m.label}</span>
-                      <span className="text-sm font-display text-ink font-bold block mt-0.5">{m.val}</span>
-                    </div>
-                  ))}
-                </div>
+              </div>
               </div>
 
               <div className="mt-6 pt-4 border-t border-rule flex flex-wrap items-center justify-between gap-3">

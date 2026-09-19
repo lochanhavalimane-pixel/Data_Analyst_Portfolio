@@ -34,9 +34,9 @@ export default function ProjectModal({ project, onClose }) {
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex max-w-[100vw] items-center justify-center overflow-x-hidden overflow-y-auto bg-ink/80 backdrop-blur-sm p-0 sm:p-6">
+    <div className="fixed inset-0 z-50 flex max-w-[100vw] items-center justify-center overflow-x-hidden overflow-y-auto overscroll-y-contain bg-ink/80 backdrop-blur-sm p-0 sm:p-6">
       <div
-        className="relative w-[95%] max-w-full max-h-[90vh] overflow-x-hidden overflow-y-auto border border-ink bg-cream p-3 text-ink shadow-2xl sm:w-full sm:max-w-4xl sm:p-10"
+        className="relative w-[95%] max-w-full max-h-[90vh] overflow-x-hidden overflow-y-auto overscroll-y-contain border border-ink bg-cream p-3 text-ink shadow-2xl sm:w-full sm:max-w-4xl sm:p-10"
         onScroll={handleModalScroll}
         role="dialog"
         aria-modal="true"
