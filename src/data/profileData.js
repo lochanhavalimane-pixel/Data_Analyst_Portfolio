@@ -44,28 +44,59 @@
   ],
   certifications: [
     {
-      title: "Data Analytics Job Simulation",
-      organization: "Quantium (Forage)",
-      date: "Aug 2026",
-      certificate: "/certificates/quantium-certificate.pdf",
-      skills: ["Commercial Analytics", "Transaction Data Cleaning", "Customer Segmentation", "A/B Testing Metrics", "Report Writing"],
-      description: "Delivered data analysis on customer transaction datasets for major supermarket chains. Conducted customer segmentation, benchmarked chip sales metrics, assessed trial store performance against control groups, and synthesized findings into executive slide packs."
+      title: "IBM Skills Network (Cognitive Class)",
+      role: "SQL and Relational Databases 101",
+      type: "Course Certification",
+      date: "SEP 2026",
+      tags: ["SQL", "RELATIONAL DATABASES", "DATABASE DESIGN", "DATA MODELING", "QUERYING"],
+      summary: "Learned fundamental database concepts, relational models, and hands-on SQL execution for querying and managing relational database management systems (RDBMS).",
+      bullets: [
+        "Executed foundational SQL queries (SELECT, INSERT, UPDATE, DELETE) and relational database design principles.",
+        "Worked with table constraints, schema structure, and multiple dataset relationships.",
+        "Applied practical data retrieval techniques using IBM Skills Network virtual lab environments."
+      ],
+      certificateUrl: "/certificates/IBM%20Skills%20Network.pdf"
     },
     {
-      title: "Data Analytics Job Simulation",
-      organization: "Deloitte (Forage)",
-      date: "Jun 2026",
-      certificate: "/certificates/deloitte-certificate.pdf",
-      skills: ["Forensic Analytics", "Data Visualization", "Tableau / BI Reporting", "Anomaly Detection"],
-      description: "Analyzed corporate operational datasets to uncover procedural anomalies and financial discrepancies. Built interactive executive summary dashboards and structured evidence-based recommendations."
+      title: "QUANTIUM (FORAGE)",
+      role: "Data Analytics Job Simulation",
+      type: "Simulated Industry Role",
+      date: "AUG 2026",
+      tags: ["COMMERCIAL ANALYTICS", "TRANSACTION DATA CLEANING", "CUSTOMER SEGMENTATION", "A/B TESTING METRICS", "REPORT WRITING"],
+      summary: "Delivered data analysis on customer transaction datasets for major supermarket chains. Conducted customer segmentation, benchmarked chip sales metrics, assessed trial store performance against control groups, and synthesized findings into executive slide packs.",
+      bullets: [
+        "Analyzed supermarket transaction datasets using statistical benchmarking to evaluate customer chip buying habits.",
+        "Formulated trial and control store pairings based on similarity metrics (sales, customer volume) to assess campaign uplift.",
+        "Packaged statistical findings into non-technical, visual commercial recommendations for category managers."
+      ],
+      certificateUrl: "/certificates/quantium-certificate.pdf"
     },
     {
-      title: "Networking Basics",
-      organization: "Cisco Networking Academy",
-      date: "Nov 2025",
-      certificate: "/certificates/cisco-networking-basics.pdf",
-      skills: ["Network Topologies", "Protocols (TCP/IP, UDP)", "Packet Analysis", "Infrastructure"],
-      description: "Mastered core network architectures, routing fundamentals, OSI layers, and data transfer protocols crucial for distributed data systems and cloud ETL pipelines."
+      title: "DELOITTE (FORAGE)",
+      role: "Data Analytics Job Simulation",
+      type: "Simulated Industry Role",
+      date: "JUN 2026",
+      tags: ["FORENSIC ANALYTICS", "DATA VISUALIZATION", "TABLEAU / BI REPORTING", "ANOMALY DETECTION"],
+      summary: "Analyzed corporate operational datasets to uncover procedural anomalies and financial discrepancies. Built interactive executive summary dashboards and structured evidence-based recommendations.",
+      bullets: [
+        "Audited enterprise ledger datasets to detect outliers, anomalous expenditure patterns, and compliance variances.",
+        "Built executive dashboards visualizing financial transactions with interactive risk indicators and drill-down capabilities."
+      ],
+      certificateUrl: "/certificates/deloitte-certificate.pdf"
+    },
+    {
+      title: "CISCO NETWORKING ACADEMY",
+      role: "Networking Basics",
+      type: "Simulated Industry Role",
+      date: "NOV 2025",
+      tags: ["NETWORK TOPOLOGIES", "PROTOCOLS (TCP/IP, UDP)", "PACKET ANALYSIS", "INFRASTRUCTURE"],
+      summary: "Gained core foundational knowledge in network architecture, IP addressing, routing principles, and network communication protocols.",
+      bullets: [
+        "Configured network models and learned transport/network layer protocol operations.",
+        "Analyzed data packet flows and fundamental network topologies for enterprise infrastructure.",
+        "Mastered IP addressing, packet transmission, network topologies, and client-server models underlying real-time data pipelines."
+      ],
+      certificateUrl: "/certificates/cisco-networking-basics.pdf"
     }
   ]
 };

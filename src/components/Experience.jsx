@@ -41,15 +41,15 @@ export default function Experience() {
                       onClick={() => setExpandedCertification(expandedCertification === idx ? null : idx)}
                     >
                       <span className="block text-base font-semibold text-ink">{item.title}</span>
-                      <span className="mt-1 block text-sm text-muted">{item.organization}</span>
+                      <span className="mt-1 block text-sm text-muted">{item.role}</span>
                     </button>
                     <span className="shrink-0 eyebrow text-muted font-mono text-xs">{item.date}</span>
                   </div>
 
                   <div className="mt-3 flex items-center justify-between gap-3">
-                    <span className="text-xs font-mono text-primary uppercase tracking-wider">{item.skills[0]}</span>
+                    <span className="text-xs font-mono text-primary uppercase tracking-wider">{item.tags[0]}</span>
                     <a
-                      href={item.certificate}
+                      href={item.certificateUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="shrink-0 text-xs font-bold uppercase text-muted opacity-70 underline underline-offset-4 transition-opacity duration-300 hover:opacity-100"
@@ -60,42 +60,14 @@ export default function Experience() {
 
                   {expandedCertification === idx && (
                     <div id={`certification-details-${idx}`} className="mt-3">
-                      <p className="text-sm text-ink/80 leading-relaxed">{item.description}</p>
+                      <p className="text-sm text-ink/80 leading-relaxed">{item.summary}</p>
                       <ul className="mt-3 space-y-2">
-                        {idx === 0 && (
-                          <>
-                            <li className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs text-ink/75">
-                              <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                              <span>Analyzed supermarket transaction datasets using statistical benchmarking to evaluate customer chip buying habits.</span>
-                            </li>
-                            <li className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs text-ink/75">
-                              <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                              <span>Formulated trial and control store pairings based on similarity metrics (sales, customer volume) to assess campaign uplift.</span>
-                            </li>
-                            <li className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs text-ink/75">
-                              <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                              <span>Packaged statistical findings into non-technical, visual commercial recommendations for category managers.</span>
-                            </li>
-                          </>
-                        )}
-                        {idx === 1 && (
-                          <>
-                            <li className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs text-ink/75">
-                              <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                              <span>Audited enterprise ledger datasets to detect outliers, anomalous expenditure patterns, and compliance variances.</span>
-                            </li>
-                            <li className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs text-ink/75">
-                              <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                              <span>Built executive dashboards visualizing financial transactions with interactive risk indicators and drill-down capabilities.</span>
-                            </li>
-                          </>
-                        )}
-                        {idx === 2 && (
-                          <li className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs text-ink/75">
+                        {item.bullets.map((bullet) => (
+                          <li key={bullet} className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs text-ink/75">
                             <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                            <span>Mastered IP addressing, packet transmission, network topologies, and client-server models underlying real-time data pipelines.</span>
+                            <span>{bullet}</span>
                           </li>
-                        )}
+                        ))}
                       </ul>
                     </div>
                   )}
@@ -104,7 +76,7 @@ export default function Experience() {
                 <div className="hidden md:block">
                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">
                   <h3 className="d-3 text-ink">
-                    {item.organization}
+                    {item.title}
                   </h3>
                   <span className="shrink-0 eyebrow text-muted font-mono text-xs">
                     {item.date}
@@ -112,61 +84,31 @@ export default function Experience() {
                 </div>
 
                 <p className="mt-2 text-base font-semibold text-ink flex items-center gap-2">
-                  <span>{item.title}</span>
-                  <span className="text-muted font-normal">— Simulated Industry Role</span>
+                  <span>{item.role}</span>
+                  <span className="text-muted font-normal">— {item.type}</span>
                 </p>
 
                 <p className="mt-1 text-xs font-mono text-primary uppercase tracking-wider">
-                  {item.skills.join(" • ")}
+                  {item.tags.join(" • ")}
                 </p>
 
                 <p className="mt-4 text-sm sm:text-base text-ink/80 leading-relaxed">
-                  {item.description}
+                  {item.summary}
                 </p>
 
                 {/* Key Execution Highlights */}
                 <ScrollReveal as="ul" className="mt-4 space-y-2.5">
-                  {idx === 0 && (
-                    <>
-                      <RevealItem as="li" className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs sm:text-sm text-ink/75">
-                        <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                        <span>Analyzed supermarket transaction datasets using statistical benchmarking to evaluate customer chip buying habits.</span>
-                      </RevealItem>
-                      <RevealItem as="li" className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs sm:text-sm text-ink/75">
-                        <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                        <span>Formulated trial and control store pairings based on similarity metrics (sales, customer volume) to assess campaign uplift.</span>
-                      </RevealItem>
-                      <RevealItem as="li" className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs sm:text-sm text-ink/75">
-                        <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                        <span>Packaged statistical findings into non-technical, visual commercial recommendations for category managers.</span>
-                      </RevealItem>
-                    </>
-                  )}
-                  {idx === 1 && (
-                    <>
-                      <RevealItem as="li" className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs sm:text-sm text-ink/75">
-                        <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                        <span>Audited enterprise ledger datasets to detect outliers, anomalous expenditure patterns, and compliance variances.</span>
-                      </RevealItem>
-                      <RevealItem as="li" className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs sm:text-sm text-ink/75">
-                        <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                        <span>Built executive dashboards visualizing financial transactions with interactive risk indicators and drill-down capabilities.</span>
-                      </RevealItem>
-                    </>
-                  )}
-                  {idx === 2 && (
-                    <>
-                      <RevealItem as="li" className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs sm:text-sm text-ink/75">
-                        <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
-                        <span>Mastered IP addressing, packet transmission, network topologies, and client-server models underlying real-time data pipelines.</span>
-                      </RevealItem>
-                    </>
-                  )}
+                  {item.bullets.map((bullet) => (
+                    <RevealItem key={bullet} as="li" className="grid grid-cols-[auto_minmax(0,1fr)] gap-3 text-xs sm:text-sm text-ink/75">
+                      <span className="mt-[0.55em] h-[2px] w-3 shrink-0 bg-primary" aria-hidden="true"></span>
+                      <span>{bullet}</span>
+                    </RevealItem>
+                  ))}
                 </ScrollReveal>
 
                 <div className="mt-5 flex justify-end">
                   <a
-                    href={item.certificate}
+                    href={item.certificateUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-bold uppercase text-muted opacity-70 underline underline-offset-4 transition-opacity duration-300 hover:opacity-100"
