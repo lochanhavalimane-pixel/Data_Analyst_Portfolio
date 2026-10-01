@@ -58,7 +58,7 @@
       certificateUrl: "/certificates/IBM%20Skills%20Network.pdf"
     },
     {
-      title: "QUANTIUM (FORAGE)",
+      title: "Quantium (Forage)",
       role: "Data Analytics Job Simulation",
       type: "Simulated Industry Role",
       date: "AUG 2026",
@@ -72,7 +72,7 @@
       certificateUrl: "/certificates/quantium-certificate.pdf"
     },
     {
-      title: "DELOITTE (FORAGE)",
+      title: "Deloitte (Forage)",
       role: "Data Analytics Job Simulation",
       type: "Simulated Industry Role",
       date: "JUN 2026",
@@ -85,7 +85,7 @@
       certificateUrl: "/certificates/deloitte-certificate.pdf"
     },
     {
-      title: "CISCO NETWORKING ACADEMY",
+      title: "Cisco Networking Academy",
       role: "Networking Basics",
       type: "Simulated Industry Role",
       date: "NOV 2025",

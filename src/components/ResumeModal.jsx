@@ -94,6 +94,30 @@ export default function ResumeModal({ isOpen, onClose }) {
             </p>
           </div>
 
+          {/* Projects */}
+          <div className="mt-6 border-b border-rule pb-6">
+            <h2 className="eyebrow text-xs font-bold text-primary tracking-eyebrow mb-3">
+              PROJECTS
+            </h2>
+            <div>
+              <div className="flex justify-between items-baseline">
+                <h3 className="font-bold text-xs sm:text-sm text-ink">
+                  Customer Shopping Behaviour Analysis: <span className="font-mono font-normal text-muted">Python, MySQL, Power BI</span>
+                </h3>
+              </div>
+              <ul className="mt-2 space-y-1.5 text-xs text-ink/80 pl-4 list-disc">
+                <li><strong>Analyzed</strong> shopping behavior across 3,900 transactions in Python to uncover spending patterns and customer segments, guiding strategic business decisions.</li>
+                <li><strong>Cleaned</strong> and engineered the dataset by imputing missing ratings, standardizing columns, and creating age_group and purchase_frequency features to prepare data for analysis.</li>
+                <li>Conducted SQL-based analysis in MySQL, revealing male customers generated <strong>2× more revenue</strong> than female customers <strong>($157.9K vs. $75.2K)</strong>.</li>
+                <li>Identified that repeat buyers (&gt;5 purchases) were nearly <strong>3× more likely to subscribe</strong>, informing loyalty program recommendations.</li>
+                <li>Built an interactive Power BI dashboard with dynamic filters to visualize revenue and sales trends across categories and age groups.</li>
+                <li className="list-none -ml-4 font-mono text-primary text-[0.75rem]">
+                  Repository: <a href="https://github.com/lochanhavalimane-pixel/Customer_Shopping_Behaviour_Analysis" target="_blank" rel="noreferrer" className="hover:underline">github.com/lochanhavalimane-pixel/Customer_Shopping_Behaviour_Analysis</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           {/* Education */}
           <div className="mt-6 border-b border-rule pb-6">
             <h2 className="eyebrow text-xs font-bold text-primary tracking-eyebrow mb-3">
@@ -130,36 +154,16 @@ export default function ResumeModal({ isOpen, onClose }) {
             </ul>
           </div>
 
-          {/* Projects */}
-          <div className="mt-6 border-b border-rule pb-6">
-            <h2 className="eyebrow text-xs font-bold text-primary tracking-eyebrow mb-3">
-              PROJECTS
-            </h2>
-            <div>
-              <div className="flex justify-between items-baseline">
-                <h3 className="font-bold text-xs sm:text-sm text-ink">
-                  Customer Shopping Behaviour Analysis: <span className="font-mono font-normal text-muted">Python, MySQL, Power BI</span>
-                </h3>
-              </div>
-              <ul className="mt-2 space-y-1.5 text-xs text-ink/80 pl-4 list-disc">
-                <li>Analyzed shopping behavior across 3,900 transactions in Python to uncover spending patterns and customer segments, guiding strategic business decisions.</li>
-                <li>Cleaned and engineered the dataset by imputing missing ratings, standardizing columns, and creating age_group and purchase_frequency features to prepare data for analysis.</li>
-                <li>Conducted SQL-based analysis in MySQL, revealing male customers generated <strong>2× more revenue</strong> than female customers ($157.9K vs. $75.2K).</li>
-                <li>Identified that repeat buyers (&gt;5 purchases) were nearly <strong>3× more likely to subscribe</strong>, informing loyalty program recommendations.</li>
-                <li>Built an interactive Power BI dashboard with dynamic filters to visualize revenue and sales trends across categories and age groups.</li>
-                <li className="list-none -ml-4 font-mono text-primary text-[0.75rem]">
-                  Repository: github.com/lochanhavalimane-pixel/Customer_Shopping_Behaviour_Analysis
-                </li>
-              </ul>
-            </div>
-          </div>
-
           {/* Certifications */}
           <div className="mt-6">
             <h2 className="eyebrow text-xs font-bold text-primary tracking-eyebrow mb-3">
               CERTIFICATIONS
             </h2>
             <ul className="space-y-2 text-xs sm:text-sm text-ink/85">
+              <li className="flex justify-between">
+                <span>• SQL and Relational Databases 101– IBM Skills Network</span>
+                <span className="font-mono text-muted">Sep 2026</span>
+              </li>
               <li className="flex justify-between">
                 <span>• Data Analytics Job Simulation – Quantium (Forage)</span>
                 <span className="font-mono text-muted">Aug 2026</span>

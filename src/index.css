@@ -134,6 +134,10 @@
   line-height: 0.98;
 }
 
+.certification-title {
+  text-transform: none;
+}
+
 .eyebrow {
   letter-spacing: 0.18em;
   text-transform: uppercase;

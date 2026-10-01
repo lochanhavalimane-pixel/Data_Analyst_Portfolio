@@ -75,7 +75,7 @@ export default function Experience() {
 
                 <div className="hidden md:block">
                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">
-                  <h3 className="d-3 text-ink">
+                  <h3 className="d-3 certification-title text-ink">
                     {item.title}
                   </h3>
                   <span className="shrink-0 eyebrow text-muted font-mono text-xs">
