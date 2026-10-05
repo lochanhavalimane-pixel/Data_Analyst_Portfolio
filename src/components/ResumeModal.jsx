@@ -118,6 +118,35 @@ export default function ResumeModal({ isOpen, onClose }) {
             </div>
           </div>
 
+          {/* Experience */}
+          <div className="mt-6 border-b border-rule pb-6">
+            <h2 className="eyebrow text-xs font-bold text-primary tracking-eyebrow mb-3">
+              EXPERIENCE
+            </h2>
+            <div>
+              <div className="flex justify-between items-baseline gap-4 text-xs sm:text-sm">
+                <h3 className="font-bold text-xs sm:text-sm text-ink">
+                  Data Analysis Intern <span className="font-normal">—</span>{" "}
+                  <span className="font-normal">Cognifyz IT Solutions Pvt. Ltd.</span>
+                </h3>
+                <span className="shrink-0 font-mono text-xs text-muted">
+                  Aug 2026 – Sep 2026
+                </span>
+              </div>
+              <ul className="mt-2 space-y-1.5 text-xs text-ink/80 pl-4 list-disc">
+                <li>
+                  Analyzed a restaurant dataset containing <strong>9,551 records</strong> and <strong>21 variables</strong> using <strong>SQL</strong> to identify trends in cuisines, city distribution, ratings, pricing, delivery, and restaurant chains.
+                </li>
+                <li>
+                  Performed data-driven analysis using <strong>SQL</strong> and <strong>Python</strong> concepts, including data validation, aggregation, statistical analysis, and correlation analysis, identifying a positive relationship between restaurant votes and ratings.
+                </li>
+                <li>
+                  Derived actionable insights from price-range and service-availability analysis, including online delivery and table booking patterns, and documented findings through a comprehensive analytical report.
+                </li>
+              </ul>
+            </div>
+          </div>
+
           {/* Education */}
           <div className="mt-6 border-b border-rule pb-6">
             <h2 className="eyebrow text-xs font-bold text-primary tracking-eyebrow mb-3">
